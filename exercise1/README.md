@@ -9,6 +9,7 @@ Run the following command to clone the repository:
 ## 1.2 - Direct to exercise1
 Use the following commands to get to the correct directory:
 `ls` - ensure that exercise1 is here.
+
 `cd cse3150/exercise1`
 # 2 - Execute the program
 ## 2.1 - Compile
