@@ -52,8 +52,8 @@ void print_linked_list(struct node* start, int total_elements) {
     }
 }
 
-void delete_linked_list(node* start) {
-    node* current = start;
+void delete_linked_list(node** start) {
+    node* current = *start;
     node* next;
 
     while (current != nullptr) {
@@ -62,7 +62,7 @@ void delete_linked_list(node* start) {
         current = next;
     }
 
-    start = nullptr;
+    *start = nullptr;
 }
 
 //update_data_in_linked_list:
