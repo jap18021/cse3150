@@ -52,14 +52,14 @@ void print_linked_list(struct node* start, int total_elements) {
     }
 }
 
-void delete_linked_list(node** start) {
-    node* current = *start;
-    node* next;
+void delete_linked_list(struct node*& start) {
+    node* current = start;
+    node* n_next = NULL;
 
-    while (current != nullptr) {
-        next = current->next;
+    while (current != NULL) {
+        n_next = current->next;
         delete current;
-        current = next;
+        current = n_next;
     }
 
     *start = nullptr;
