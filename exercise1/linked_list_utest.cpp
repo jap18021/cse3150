@@ -45,8 +45,11 @@ TEST_CASE("linked_list testing") {
         start->next->data = 2;
         start->next->next = nullptr;
 
-        delete_linked_list(start);
+        node* temp = start; // Save the initial value of start
 
-        CHECK(start == nullptr);
+        delete_linked_list(&start);
+
+        CHECK_EQ(start, nullptr); // Check that start is now nullptr
+        CHECK_NE(temp, nullptr);  // Check that start was not nullptr before calling delete_linked_list
     }
 }
