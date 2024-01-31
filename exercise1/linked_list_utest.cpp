@@ -39,17 +39,10 @@ TEST_CASE("linked_list testing") {
     }
 
     SUBCASE("delete_linked_list") {
-        node* start = new node;
-        start->data = 1;
-        start->next = new node;
-        start->next->data = 2;
-        start->next->next = nullptr;
-
-        node* temp = start; // Save the initial value of start
-
-        delete_linked_list(&start);
-
-        CHECK_EQ(start, nullptr); // Check that start is now nullptr
-        CHECK_NE(temp, nullptr);  // Check that start was not nullptr before calling delete_linked_list
+        struct node* llist = build_new_linked_list(two_element_linked_list);
+      
+        CHECK(llist != nullptr);
+        delete_linked_list(linked_list);
+        CHECK(llist == nullptr);
     }
 }
