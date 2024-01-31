@@ -14,7 +14,7 @@ Use the following commands to get to the correct directory:
 # 2 - Execute the program
 ## 2.1 - Compile
 Use the following command to compile the program:
-`g++ linked_list_test.cpp linked_list.cpp -o test`
+`g++ linked_list_utest.cpp linked_list.cpp -o test`
 ## 2.2 - Run the program
 Use the following command to run the program:
 `./test`
