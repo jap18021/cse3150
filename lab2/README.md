@@ -1,5 +1,5 @@
 # Lab 2 - Well-Balanced with Yates
-This program scrambles an array using Yates and shows the ratio between well-balanced not well-balanced lists.
+This program scrambles an array using Yates and shows the ratio between well-balanced not well-balanced lists. It should approach 0 with larger values of n.
 # 1 - Initialization
 ## 1.1 - Clone the repository
 Run the following command to clone the repository:
