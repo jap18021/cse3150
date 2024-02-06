@@ -4,7 +4,7 @@
 #include "wbfy.h"
 
 int runSimulation(int n, int total) {
-    int wellBalancedCount = 0;
+    int well_balanced_count = 0;
 
     for (int run = 0; run < total; ++run) {
         std::vector<int> sequence(2 * n);
@@ -12,11 +12,11 @@ int runSimulation(int n, int total) {
         std::fill(sequence.begin() + n, sequence.end(), -1);
         fisher_yates_shuffle(sequence);
         if (is_well_balanced(sequence)) {
-            wellBalancedCount++;
+            well_balanced_count++;
         }
     }
 
-    return wellBalancedCount;
+    return well_balanced_count;
 }
 
 int main() {
@@ -25,12 +25,12 @@ int main() {
     int n = 6; 
     int total = 100000;  
 
-    int wellBalancedCount = runSimulation(n, total);
+    int well_balanced_count = runSimulation(n, total);
 
-    double proportionWellBalanced = static_cast<double>(wellBalancedCount) / total;
+    double proportionWellBalanced = static_cast<double>(well_balanced_count) / total;
     std::cout << "total: " << total << std::endl;
-    std::cout << "validated: " << wellBalancedCount << std::endl;
-    std::cout << "Proportion: " << proportionWellBalanced << std::endl;
+    std::cout << "validated: " << well_balanced_count << std::endl;
+    std::cout << "proportion: " << proportionWellBalanced << std::endl;
 
     return 0;
 }
