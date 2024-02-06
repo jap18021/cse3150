@@ -22,7 +22,7 @@ int runSimulation(int n, int total) {
 int main() {
     std::srand(static_cast<unsigned int>(std::time(nullptr)));
 
-    int n = 6; 
+    int n = 4; 
     int total = 100000;  
 
     int well_balanced_count = runSimulation(n, total);
