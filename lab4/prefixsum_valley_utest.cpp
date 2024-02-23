@@ -23,14 +23,14 @@ TEST_CASE("Testing prefixsum_valley") {
         CHECK(final_list.back() == -1);
     }
 
-    SUBCASE("Edge case 1: Check with a list of size 1") {
-        std::vector<int> list = generate_balanced_list(0);
+    SUBCASE("Edge case 1: Check with a list of size 2") {
+        std::vector<int> list = generate_balanced_list(1);
         CHECK(find_lowest_depth(list) == -1);
     }
 
-    SUBCASE("Edge case 2: Check with a list of size 0") {
-        std::vector<int> list = generate_balanced_list(-1);
-        CHECK(list.empty());
+    SUBCASE("Edge case 2: Check with a list of size 1") {
+        std::vector<int> list = generate_balanced_list(0);
+        CHECK(find_lowest_depth(list) == -1);
     }
 
     SUBCASE("Edge case 3: Check if the final list is correctly formed when the list size is 1") {
