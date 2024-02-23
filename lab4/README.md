@@ -1,4 +1,4 @@
-# Lab 3 - P1-P2 Well Balanced Algorithm
+# Lab 4 - P1-P2 Well Balanced Algorithm
 This program creates an algorithm as per the lab instructions, which theoretically creates a list with prefix sums that never cross the x-axis.
 # 1 - Initialization
 ## 1.1 - Clone the repository
