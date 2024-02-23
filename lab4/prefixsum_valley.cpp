@@ -5,9 +5,10 @@
 
 // Function to generate a balanced list
 std::vector<int> generate_balanced_list(int n) {
-    std::vector<int> list(2*n + 1);
-    std::fill(list.begin(), list.begin() + n, 1);
-    std::fill(list.begin() + n, list.end(), -1);
+    std::vector<int> list(2*n + 1); // Adjust size to accommodate extra -1
+    std::fill(list.begin(), list.begin() + n, 1); // Fill with n 1's
+    std::fill(list.begin() + n, list.end() - 1, -1); // Fill with n -1's
+    list.back() = -1; // Add an extra -1 at the end
     return list;
 }
 
