@@ -17,5 +17,12 @@ int main() {
     }
     std::cout << std::endl;
 
+    std::vector<int> prefix_sums = calculate_prefix_sums(result);
+    std::cout << "Prefix sums: ";
+    for (int sum : prefix_sums) {
+        std::cout << sum << " ";
+    }
+    std::cout << std::endl;
+
     return 0;
 }
