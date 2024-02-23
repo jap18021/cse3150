@@ -35,9 +35,29 @@ int find_lowest_depth(const std::vector<int>& list) {
     return lowest_depth;
 }
 
+// Function to calculate prefix sums
+std::vector<int> calculate_prefix_sums(const std::vector<int>& list) {
+    std::vector<int> prefix_sums(list.size());
+    int sum = 0;
+    for (int i = 0; i < list.size(); i++) {
+        sum += list[i];
+        prefix_sums[i] = sum;
+    }
+    return prefix_sums;
+}
+
 // Function to split the list
 std::pair<std::vector<int>, std::vector<int>> split_list(const std::vector<int>& list) {
-    int lowest_depth_index = std::distance(list.begin(), std::min_element(list.begin(), list.end()));
+    int sum = 0;
+    int lowest_depth = 0;
+    int lowest_depth_index = 0;
+    for (int i = 0; i < list.size(); i++) {
+        sum += list[i];
+        if (sum < lowest_depth) {
+            lowest_depth = sum;
+            lowest_depth_index = i;
+        }
+    }
     std::vector<int> P1(list.begin(), list.begin() + lowest_depth_index + 1);
     std::vector<int> P2(list.begin() + lowest_depth_index + 1, list.end());
     return std::make_pair(P1, P2);
