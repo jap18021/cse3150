@@ -12,11 +12,18 @@ Use the following commands to get to the correct directory:
 # 2 - Execute the program
 ## 2.1 - Compile
 Use the following command to compile the program:
+
 `g++ main.cpp student.cpp -o main`
+
 ## 2.2 - Run and test the program
 Use the following command to run the program:
+
 `./main`
+
 Use the following commands to test the program:
+
 `g++ student_test.cpp student.cpp -o test`
+
 `./test`
+
 Note that this is adjusted to whatever you name the program in the compile step.
