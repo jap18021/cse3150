@@ -10,7 +10,7 @@ Use the following commands to get to the correct directory:
 
 `ls` - ensure that lab5 is here.
 
-`cd cse3150/lab5'
+`cd cse3150/lab5`
 
 # 2 - Execute the program
 ## 2.1 - Compile and Run
